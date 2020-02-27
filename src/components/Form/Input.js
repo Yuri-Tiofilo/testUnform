@@ -15,6 +15,9 @@ export default function Input({ name, ...rest }) {
   }, [fieldName, registerField])
 
   return (
-    <input ref={inputRef} {...rest}/>
+    <div>
+      <input ref={inputRef} {...rest}/>
+      {error && <span style={{ color: '#f00'}}>{error}</span>}
+    </div>
   );
 }
